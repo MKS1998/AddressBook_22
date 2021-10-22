@@ -67,8 +67,8 @@ public class ContactDetails {
 
 	@Override
 	public String toString() {
-		return "FirstName= " + firstName + "" + "LastName=" + lastName + "" + "AddressCity=" + addressCity + "" 
-				+ "State=" + state + "" + "Email=" + email + "" + "Zip=" + zip + "\n" + "PhoneNumber=" + phoneNumber;
+		return "FirstName= " + firstName + "\n" + "LastName=" + lastName + "\n" + "AddressCity=" + addressCity + "\n" 
+				+ "State=" + state + "\n" + "Email=" + email + "\n" + "Zip=" + zip + "\n" + "PhoneNumber=" + phoneNumber;
 
 	}
 }
