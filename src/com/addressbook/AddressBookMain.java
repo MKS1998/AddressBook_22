@@ -5,15 +5,23 @@ import java.util.Scanner;
 public class AddressBookMain {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Welcome to the Address Book Problem..");
-		NewAddressBooks person = new NewAddressBooks();
-		person.addContact();
-		System.out.println("Enter Y To Edit The Contact");
-		String str = sc.nextLine();
-		if (str.equals("y") || str.equals("Y")) {
-			person.editContact(); // Calling The Edit Contact Method
+		System.out.println("Welcome into the Program of Address Book System !!");
+		NewAddressBooks book = new NewAddressBooks();
+		book.addContact();// Calling Add Contacts Method
+		System.out.println(book.person);
+		System.out.println("Enter the choice \n 1. Edit \n 2. Delete");
+		int option = sc.nextInt();
+		switch (option) {
+		case 1:
+			book.editContact();
 			System.out.println("You have Entered following data");
-			System.out.println("The Contact Details After Editing : " + person);
+			System.out.println(book.person);
+			System.out.println("Thank you for Using the Address book");
+			break;
+		case 2:
+			book.deleteContact();
+			System.out.println("Address Book details :" + book.person);
+			break;
 		}
 	}
 }
